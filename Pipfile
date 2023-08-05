@@ -9,10 +9,11 @@ django-decouple = "*"
 django-allauth = "*"
 django-crispy-forms = "*"
 crispy-bootstrap5 = "*"
-pytest-django = "*"
-pytest = "*"
+pre-commit = "*"
 
 [dev-packages]
+pytest-django = "*"
+pytest = "*"
 
 [requires]
 python_version = "3.11"
