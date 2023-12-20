@@ -19,3 +19,16 @@ repos:
     hooks:
       - id: djlint-reformat-django
         args: [--indent=2, --preserve-blank-lines]
+
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.9.0
+    hooks:
+      - id: pyupgrade
+        args:
+          - '--py311-plus'
+
+  - repo: https://github.com/adamchainz/django-upgrade
+    rev: 1.14.0
+    hooks:
+      - id: django-upgrade
+        args: [--target-version, '5.0']
