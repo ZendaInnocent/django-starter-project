@@ -64,5 +64,19 @@
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'js/htmx.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
+    <script>
+      {% if debug %}
+        if (typeof window.htmx !== "undefined") {
+          htmx.on("htmx:afterSettle", function (detail) {
+            if (
+              typeof window.djdt !== "undefined"
+              && detail.target instanceof HTMLBodyElement
+            ) {
+              djdt.show_toolbar()
+            }
+          })
+        }
+        {% endif %}
+    </script>
   </body>
 </html>

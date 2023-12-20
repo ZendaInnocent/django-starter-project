@@ -17,6 +17,7 @@ pytest-django = "*"
 djlint = "*"
 pytest-cov = "*"
 coverage = {extras = ["toml"], version = "*"}
+django-debug-toolbar = "*"
 
 [requires]
 python_version = "3.11"
