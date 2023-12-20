@@ -1,8 +1,15 @@
 [tool.ruff.format]
 quote-style = "single"
 
-[tool.djlint]
-blank_line_after_tag = "load,extends,include"
+[tool.djlint-reformat]
 blank_line_before_tag = "load,extends,include"
+blank_line_after_tag = "load,extends,include"
 indent = 2
 preserve_blank_lines = true
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+addopts = ["--cov", "--cov-report term"]
+
+[tool.coverage.run]
+omit = ["*/tests/*", "*/migrations/*", "*/settings.py", "*/.venv/*", "*/manage.py", "*/__init__.py"]

@@ -28,7 +28,8 @@ SECRET_KEY = config('DJANGO_SECRET_KEY')
 DEBUG = config('DEBUG', cast=bool, default=False)
 
 ALLOWED_HOSTS = config(
-    'ALLOWED_HOSTS', cast=lambda v: [s.strip() for s in v.split(',')]
+    'ALLOWED_HOSTS',
+    cast=lambda hosts: [host.strip() for host in hosts.split(',')],
 )
 
 
