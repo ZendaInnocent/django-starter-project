@@ -5,15 +5,14 @@ name = "pypi"
 
 [packages]
 django = "*"
-django-decouple = "*"
 django-allauth = "*"
 django-crispy-forms = "*"
 crispy-bootstrap5 = "*"
 pre-commit = "*"
+python-decouple = "*"
 
 [dev-packages]
 pytest-django = "*"
-pytest = "*"
 
 [requires]
 python_version = "3.11"
